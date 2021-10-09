@@ -1,0 +1,14 @@
+{% include 'base.html' %}
+{% load crispy_forms_tags %}
+<h1> In Forms HTML Page</h1>
+<br>
+<div class="col-sm-4 col-sm-offset-4">
+    <h1>{{title}}</h1>
+    <form method="POST" action="">{% csrf_token %}
+        {{form|crispy}}
+
+        <br>
+        <input class="btn btn-primary" type="submit" value="{{title}}"/>
+        <a class="btn btn-warning" href="/book/list">Cancel</a>&nbsp;
+    </form>
+</div>

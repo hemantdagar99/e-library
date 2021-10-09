@@ -1,0 +1,13 @@
+
+{% include 'base.html' %}
+{% if request.user.is_authenticated %}
+<h1>In Update View</h1>
+
+<form action="" method="POST" > {% csrf_token %}
+    {{ form.as_p }}
+    <input class="btn btn-success" type="submit" value="Update"/>
+     <a class="btn btn-warning" href="/book/{{obj.id}}">Cancel</a>
+
+
+</form>
+{% endif %}

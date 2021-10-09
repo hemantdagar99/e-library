@@ -1,0 +1,17 @@
+{% include 'base.html' %}
+{% load crispy_forms_tags %}
+{% if request.user.is_authenticated %}
+<div class="col-md-4 col-md-offset-4">
+<h1>Create Book Here</h1>
+<form action="" method="POST" enctype="multipart/form-data" > {% csrf_token %}
+   <!-- {{ form.as_p }} -->
+    {{ form|crispy}}
+    <br>
+    <input class="btn btn-primary" type="submit" value="Submit"/>
+
+    <a class="btn btn-warning" href="/book/list">Cancel</a>&nbsp;&nbsp;&nbsp;
+
+
+</form>
+</div>
+{% endif %}

@@ -1,0 +1,28 @@
+
+{% include 'base.html' %}
+
+<h1>In book detail view</h1>
+<ul>
+
+    <li>{{book.name}}</li>
+    <li>{{book.author}}</li>
+    <li>{{book.publish_date}}</li>
+    <li>{{book.price}}</li>
+
+
+    <br>
+    <body>
+
+    <a class="btn btn-info" href="/book/list">Book List</a>&nbsp;&nbsp;&nbsp;
+
+    {% if request.user.is_authenticated %}
+
+    <a class="btn btn-warning" href="/book/{{book.id}}/update/">Update</a>&nbsp;&nbsp;&nbsp;
+
+    <a class="btn btn-danger" href="/book/{{book.id}}/delete/">Delete</a>
+
+    {% endif %}
+
+    </body>
+
+</ul>

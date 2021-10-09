@@ -1,0 +1,10 @@
+{% include 'base.html' %}
+{% if request.user.is_authenticated %}
+<h1>In Delete View</h1>
+<form  method="POST"> {% csrf_token %}
+    Are you want to delete the {{form.name}}?<br><br>
+    <input class="btn btn-danger" type="submit" value="Yes"/><br><br>
+    <a class="btn btn-info" href="/book/{{form.id}}">Cancel</a>
+
+</form>
+{% endif %}
