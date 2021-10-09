@@ -10,7 +10,6 @@ from django.core.validators import RegexValidator
 class Book(models.Model):
     name = models.CharField(max_length=20)
     author = models.CharField(max_length=30)
-    publish_date = models.DateField(default=timezone.now)
+    publish_date = models.DateTimeField(default=timezone.now)
     price = models.IntegerField(default=0)
-    #image = models.ImageField(upload_to="image/")
 

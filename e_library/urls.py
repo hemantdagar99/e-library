@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 from book.views import register_view, login_view, home, logout_view
+from e_library.routers import router
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,5 +26,7 @@ urlpatterns = [
     path('register/', register_view, name='register_view'),
     path('login/', login_view, name='login_view'),
     path('logout/', logout_view, name='logout_view'),
+    path('api-auth/', include('rest_framework.urls')),
+    path('api/', include(router.urls)),
 
 ]

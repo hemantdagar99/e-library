@@ -50,15 +50,14 @@ pyparsing==2.4.7
 pyrsistent==0.18.0
 python-dateutil==2.8.2
 pytz==2021.1
-pywin32==301
-pywinpty==1.1.4
+# pywin32==301
+# pywinpty==1.1.4
 pyzmq==22.3.0
 requests==2.26.0
 requests-unixsocket==0.2.0
 Send2Trash==1.8.0
 six==1.16.0
 sniffio==1.2.0
-sqlparse==0.4.1
 terminado==0.12.1
 testpath==0.5.0
 tornado==6.1
@@ -67,3 +66,5 @@ urllib3==1.26.7
 wcwidth==0.2.5
 webencodings==0.5.1
 websocket-client==1.2.1
+djangorestframework==3.12.4
+django-crispy-forms
